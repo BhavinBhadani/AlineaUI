@@ -1,40 +1,40 @@
 {
-    "trending": [
+    "trendings": [
         {
-            "title": "The Ancient Magus' Bride",
-            "category": "",
-            "imageLink": "pic1",
-            "movement": +2.01
+            "title": "Alphabet Inc.",
+            "category": "GOOGL",
+            "imageLink": "google",
+            "movement": 5.78,
         },
         {
-            "title": "The Ancient Magus' Bride",
-            "category": "",
-            "imageLink": "pic1",
-            "movement": +2.01
+            "title": "Pinterest",
+            "category": "PIN",
+            "imageLink": "pinterest",
+            "movement": -4.77,
         },
         {
-            "title": "The Ancient Magus' Bride",
-            "category": "",
-            "imageLink": "pic1",
-            "movement": +2.01
+            "title": "Slack Technologies",
+            "category": "WORK",
+            "imageLink": "slack",
+            "movement": -5.99,
         },
         {
-            "title": "The Ancient Magus' Bride",
-            "category": "",
-            "imageLink": "pic1",
-            "movement": +2.01
+            "title": "Apple Inc.",
+            "category": "AAPL",
+            "imageLink": "apple",
+            "movement": 7.01,
         },
         {
-            "title": "The Ancient Magus' Bride",
-            "category": "",
-            "imageLink": "pic1",
-            "movement": +2.01
+            "title": "Twitter, Inc.",
+            "category": "TWTR",
+            "imageLink": "twitter",
+            "movement": 2.87,
         },
         {
-            "title": "The Ancient Magus' Bride",
-            "category": "",
-            "imageLink": "pic1",
-            "movement": +2.01
-        },
+            "title": "Facebook, Inc.",
+            "category": "FB",
+            "imageLink": "facebook",
+            "movement": 0.01,
+        }
     ]
 }

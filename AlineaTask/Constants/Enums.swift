@@ -26,3 +26,7 @@ enum APIError: String, Error {
     case serverOverload = "Server is overloaded"
     case permissionDenied = "You don't have permission"
 }
+
+enum TrendingTableSection: Int {
+    case gainers = 0, sellers
+}
