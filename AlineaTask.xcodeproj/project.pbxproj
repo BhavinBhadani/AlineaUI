@@ -20,7 +20,6 @@
 		6788866F2558F917004C7A45 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886632558F917004C7A45 /* PagerTabStripViewController.swift */; };
 		678886702558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886642558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift */; };
 		678886712558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886652558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift */; };
-		678886742558F9D8004C7A45 /* PagerTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886732558F9D8004C7A45 /* PagerTabCollectionViewCell.swift */; };
 		678886772558FC35004C7A45 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886762558FC35004C7A45 /* Enums.swift */; };
 		6788867B2558FDB0004C7A45 /* UIFont+Alinea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788867A2558FDB0004C7A45 /* UIFont+Alinea.swift */; };
 		6788867F255900C0004C7A45 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788867E255900C0004C7A45 /* CategoryViewController.swift */; };
@@ -33,6 +32,11 @@
 		6788869D255914A2004C7A45 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788869C255914A2004C7A45 /* Theme.swift */; };
 		678886A02559173C004C7A45 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788869F2559173C004C7A45 /* CategoryViewModel.swift */; };
 		678886A62559183D004C7A45 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886A52559183D004C7A45 /* Dynamic.swift */; };
+		678886A925592992004C7A45 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886A825592992004C7A45 /* CategoryTableViewCell.swift */; };
+		678886AD25592C10004C7A45 /* UIView+Alinea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886AC25592C10004C7A45 /* UIView+Alinea.swift */; };
+		678886B12559306F004C7A45 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886B02559306E004C7A45 /* CategoryDataSource.swift */; };
+		678886B6255931A6004C7A45 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886B5255931A6004C7A45 /* CategoryService.swift */; };
+		678886BA25593BD5004C7A45 /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886B925593BD5004C7A45 /* ThemeCollectionViewCell.swift */; };
 		67BCB9FE255842AC00A001C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BCB9FD255842AC00A001C0 /* AppDelegate.swift */; };
 		67BCBA07255842AF00A001C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67BCBA06255842AF00A001C0 /* Assets.xcassets */; };
 		67BCBA0A255842AF00A001C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BCBA08255842AF00A001C0 /* LaunchScreen.storyboard */; };
@@ -52,7 +56,6 @@
 		678886632558F917004C7A45 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripViewController.swift; sourceTree = "<group>"; };
 		678886642558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		678886652558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		678886732558F9D8004C7A45 /* PagerTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerTabCollectionViewCell.swift; sourceTree = "<group>"; };
 		678886762558FC35004C7A45 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		6788867A2558FDB0004C7A45 /* UIFont+Alinea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Alinea.swift"; sourceTree = "<group>"; };
 		6788867E255900C0004C7A45 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +68,11 @@
 		6788869C255914A2004C7A45 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		6788869F2559173C004C7A45 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		678886A52559183D004C7A45 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		678886A825592992004C7A45 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		678886AC25592C10004C7A45 /* UIView+Alinea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Alinea.swift"; sourceTree = "<group>"; };
+		678886B02559306E004C7A45 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
+		678886B5255931A6004C7A45 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		678886B925593BD5004C7A45 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		67BCB9FA255842AC00A001C0 /* AlineaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlineaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BCB9FD255842AC00A001C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67BCBA06255842AF00A001C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				6788867A2558FDB0004C7A45 /* UIFont+Alinea.swift */,
+				678886AC25592C10004C7A45 /* UIView+Alinea.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -126,6 +135,23 @@
 				6788868925591190004C7A45 /* trending.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		678886AF2559305F004C7A45 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6788869F2559173C004C7A45 /* CategoryViewModel.swift */,
+				678886B02559306E004C7A45 /* CategoryDataSource.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		678886B42559317E004C7A45 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				678886B5255931A6004C7A45 /* CategoryService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		67BCB9F1255842AC00A001C0 = {
@@ -151,6 +177,7 @@
 				6788868725591054004C7A45 /* Resources */,
 				6788863D2558F8A6004C7A45 /* Repos */,
 				67BCBA1B25584B5100A001C0 /* Constants */,
+				678886B42559317E004C7A45 /* Service */,
 				67BCBA1A25584B3100A001C0 /* Helper */,
 				67BCBA1825584AFB00A001C0 /* Model */,
 				67BCBA1725584AEE00A001C0 /* View */,
@@ -177,7 +204,8 @@
 		67BCBA1725584AEE00A001C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				678886732558F9D8004C7A45 /* PagerTabCollectionViewCell.swift */,
+				678886A825592992004C7A45 /* CategoryTableViewCell.swift */,
+				678886B925593BD5004C7A45 /* ThemeCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,7 +222,7 @@
 		67BCBA1925584B0800A001C0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				6788869F2559173C004C7A45 /* CategoryViewModel.swift */,
+				678886AF2559305F004C7A45 /* Category */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -292,26 +320,30 @@
 				6788866A2558F917004C7A45 /* BarView.swift in Sources */,
 				678886692558F917004C7A45 /* ButtonBarView.swift in Sources */,
 				6788867F255900C0004C7A45 /* CategoryViewController.swift in Sources */,
+				678886B6255931A6004C7A45 /* CategoryService.swift in Sources */,
 				678886672558F917004C7A45 /* SwipeDirection.swift in Sources */,
 				67888682255908CE004C7A45 /* ThemesViewController.swift in Sources */,
 				6788863B2558F845004C7A45 /* PagerTabViewController.swift in Sources */,
 				6788869D255914A2004C7A45 /* Theme.swift in Sources */,
+				678886BA25593BD5004C7A45 /* ThemeCollectionViewCell.swift in Sources */,
 				678886702558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
 				67888685255908DA004C7A45 /* TrendingViewController.swift in Sources */,
 				6788866D2558F917004C7A45 /* PagerTabStripError.swift in Sources */,
-				678886742558F9D8004C7A45 /* PagerTabCollectionViewCell.swift in Sources */,
 				678886772558FC35004C7A45 /* Enums.swift in Sources */,
+				678886B12559306F004C7A45 /* CategoryDataSource.swift in Sources */,
 				6788869A25591401004C7A45 /* Category.swift in Sources */,
 				6788867B2558FDB0004C7A45 /* UIFont+Alinea.swift in Sources */,
 				678886A02559173C004C7A45 /* CategoryViewModel.swift in Sources */,
 				6788866B2558F917004C7A45 /* PagerTabStripBehaviour.swift in Sources */,
 				678886A62559183D004C7A45 /* Dynamic.swift in Sources */,
 				67BCB9FE255842AC00A001C0 /* AppDelegate.swift in Sources */,
+				678886AD25592C10004C7A45 /* UIView+Alinea.swift in Sources */,
 				6788866C2558F917004C7A45 /* ButtonBarViewCell.swift in Sources */,
 				678886682558F917004C7A45 /* IndicatorInfo.swift in Sources */,
 				6788866F2558F917004C7A45 /* PagerTabStripViewController.swift in Sources */,
 				678886712558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift in Sources */,
 				6788866E2558F917004C7A45 /* BarPagerTabStripViewController.swift in Sources */,
+				678886A925592992004C7A45 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

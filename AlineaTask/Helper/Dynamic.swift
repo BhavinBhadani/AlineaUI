@@ -1,23 +1,35 @@
 
 import Foundation
 
-class Dynamic<T> {
-    typealias Listener = (T) -> ()
+public final class Observable<Value> {
     
-    var listeners: [Listener] = []
-    var value: T {
-        didSet{
-            listeners.forEach {
-                $0(value)
-            }
-        }
+    struct Observer<Value> {
+        weak var observer: AnyObject?
+        let block: (Value) -> Void
     }
     
-    init(_ value: T) {
+    private var observers = [Observer<Value>]()
+    
+    public var value: Value {
+        didSet { notifyObservers() }
+    }
+    
+    public init(_ value: Value) {
         self.value = value
     }
     
-    func bind(_ listener: @escaping Listener){
-        self.listeners.append(listener)
+    public func observe(on observer: AnyObject, observerBlock: @escaping (Value) -> Void) {
+        observers.append(Observer(observer: observer, block: observerBlock))
+        observerBlock(self.value)
+    }
+    
+    public func remove(observer: AnyObject) {
+        observers = observers.filter { $0.observer !== observer }
+    }
+    
+    private func notifyObservers() {
+        for observer in observers {
+            DispatchQueue.main.async { observer.block(self.value) }
+        }
     }
 }

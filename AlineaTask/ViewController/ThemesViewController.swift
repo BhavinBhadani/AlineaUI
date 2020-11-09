@@ -2,7 +2,12 @@
 import UIKit
 
 class ThemesViewController: UIViewController, IndicatorInfoProvider {
-    
+    var collectionView: UICollectionView = {
+        let collectionView = UICollectionView()
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+
     var itemInfo = IndicatorInfo(title: "")
 
     override func viewDidLoad() {
