@@ -12,8 +12,29 @@ extension UIView {
         }
     }
     
-    func setShadow() {
-        
+    @IBInspectable var borderWidthExt : CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColorExt : UIColor? {
+        set {
+            guard newValue != nil else {
+                layer.borderColor = nil
+                return
+            }
+            layer.borderColor = newValue?.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else {
+                return nil
+            }
+            return UIColor(cgColor: color)
+        }
     }
 }
 

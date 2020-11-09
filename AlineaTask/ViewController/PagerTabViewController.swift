@@ -26,11 +26,11 @@ class PagerTabViewController: ButtonBarPagerTabStripViewController {
         categoryViewController.view.backgroundColor = .white
         categoryViewController.itemInfo = IndicatorInfo(title: "Category")
         
-        let themesViewController = CategoryViewController()
+        let themesViewController = ThemesViewController()
         themesViewController.view.backgroundColor = .white
         themesViewController.itemInfo = IndicatorInfo(title: "Themes")
         
-        let trendingViewController = CategoryViewController()
+        let trendingViewController = TrendingViewController()
         trendingViewController.view.backgroundColor = .white
         trendingViewController.itemInfo = IndicatorInfo(title: "Trending")
         

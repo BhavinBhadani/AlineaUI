@@ -37,6 +37,9 @@
 		678886B12559306F004C7A45 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886B02559306E004C7A45 /* CategoryDataSource.swift */; };
 		678886B6255931A6004C7A45 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886B5255931A6004C7A45 /* CategoryService.swift */; };
 		678886BA25593BD5004C7A45 /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886B925593BD5004C7A45 /* ThemeCollectionViewCell.swift */; };
+		678886BE25593ED2004C7A45 /* ThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886BD25593ED2004C7A45 /* ThemeViewModel.swift */; };
+		678886C225593F19004C7A45 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886C125593F19004C7A45 /* ThemeService.swift */; };
+		678886C525593FE8004C7A45 /* ThemeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886C425593FE8004C7A45 /* ThemeDataSource.swift */; };
 		67BCB9FE255842AC00A001C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BCB9FD255842AC00A001C0 /* AppDelegate.swift */; };
 		67BCBA07255842AF00A001C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67BCBA06255842AF00A001C0 /* Assets.xcassets */; };
 		67BCBA0A255842AF00A001C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BCBA08255842AF00A001C0 /* LaunchScreen.storyboard */; };
@@ -73,6 +76,9 @@
 		678886B02559306E004C7A45 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
 		678886B5255931A6004C7A45 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		678886B925593BD5004C7A45 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		678886BD25593ED2004C7A45 /* ThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModel.swift; sourceTree = "<group>"; };
+		678886C125593F19004C7A45 /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		678886C425593FE8004C7A45 /* ThemeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDataSource.swift; sourceTree = "<group>"; };
 		67BCB9FA255842AC00A001C0 /* AlineaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlineaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BCB9FD255842AC00A001C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67BCBA06255842AF00A001C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,8 +156,18 @@
 			isa = PBXGroup;
 			children = (
 				678886B5255931A6004C7A45 /* CategoryService.swift */,
+				678886C125593F19004C7A45 /* ThemeService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		678886BC25593EBE004C7A45 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				678886BD25593ED2004C7A45 /* ThemeViewModel.swift */,
+				678886C425593FE8004C7A45 /* ThemeDataSource.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		67BCB9F1255842AC00A001C0 = {
@@ -223,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				678886AF2559305F004C7A45 /* Category */,
+				678886BC25593EBE004C7A45 /* Theme */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -320,6 +337,7 @@
 				6788866A2558F917004C7A45 /* BarView.swift in Sources */,
 				678886692558F917004C7A45 /* ButtonBarView.swift in Sources */,
 				6788867F255900C0004C7A45 /* CategoryViewController.swift in Sources */,
+				678886C225593F19004C7A45 /* ThemeService.swift in Sources */,
 				678886B6255931A6004C7A45 /* CategoryService.swift in Sources */,
 				678886672558F917004C7A45 /* SwipeDirection.swift in Sources */,
 				67888682255908CE004C7A45 /* ThemesViewController.swift in Sources */,
@@ -342,7 +360,9 @@
 				678886682558F917004C7A45 /* IndicatorInfo.swift in Sources */,
 				6788866F2558F917004C7A45 /* PagerTabStripViewController.swift in Sources */,
 				678886712558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				678886C525593FE8004C7A45 /* ThemeDataSource.swift in Sources */,
 				6788866E2558F917004C7A45 /* BarPagerTabStripViewController.swift in Sources */,
+				678886BE25593ED2004C7A45 /* ThemeViewModel.swift in Sources */,
 				678886A925592992004C7A45 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
