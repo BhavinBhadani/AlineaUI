@@ -1,0 +1,48 @@
+{
+    "themes": [
+        {
+            "title": "Collaboration",
+            "imageLink": "collaboration",
+        },
+        {
+            "title": "Contact Details",
+            "imageLink": "contact_details",
+        },
+        {
+            "title": "Cover Up",
+            "imageLink": "cover_up",
+        },
+        {
+            "title": "internet",
+            "imageLink": "internet",
+        },
+        {
+            "title": "Inspection",
+            "imageLink": "inspection",
+        },
+        {
+            "title": "Meeting Room",
+            "imageLink": "meeting_room",
+        },
+        {
+            "title": "Multi Channel",
+            "imageLink": "multichannel",
+        },
+        {
+            "title": "Omni Channel",
+            "imageLink": "omnichannel",
+        },
+        {
+            "title": "People Working Together",
+            "imageLink": "people_working_together",
+        },
+        {
+            "title": "Trust",
+            "imageLink": "trust",
+        },
+        {
+            "title": "Video Conference",
+            "imageLink": "video_conference",
+        }
+    ]
+}

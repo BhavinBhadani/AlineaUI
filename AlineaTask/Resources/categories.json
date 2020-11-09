@@ -1,0 +1,16 @@
+{
+    "categories": [
+        {
+            "title": "Stocks",
+            "imageLink": "stocks",
+        },
+        {
+            "title": "ETFs",
+            "imageLink": "etf",
+        },
+        {
+            "title": "Crypto",
+            "imageLink": "bitcoin",
+        }
+    ]
+}
