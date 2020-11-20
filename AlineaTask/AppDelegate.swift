@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupNavigationBarAppearacee()
         
-        showPagerView()
+        showTabBar()
         
         return true
     }
@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - Helpers
 extension AppDelegate {
+    func showTabBar() {
+        let vc = TabBarViewController()
+        vc.view.backgroundColor = .white
+        window!.rootViewController = vc
+        window!.makeKeyAndVisible()
+    }
+
     func showPagerView() {
         let vc = PagerTabViewController()
         vc.view.backgroundColor = .white
