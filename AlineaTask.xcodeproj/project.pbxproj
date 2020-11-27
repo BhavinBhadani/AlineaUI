@@ -3,24 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		67166A0E25595FD800AC7D29 /* TrendingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67166A0D25595FD800AC7D29 /* TrendingSectionView.swift */; };
+		67838ED92570D8EB00841CDB /* ButtonsSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67838ED82570D8EB00841CDB /* ButtonsSegmentView.swift */; };
+		67838EDE2570F5CB00841CDB /* CategoryPagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67838EDC2570F5CB00841CDB /* CategoryPagerCell.swift */; };
+		67838EE425710C8C00841CDB /* ThemesPagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67838EE325710C8C00841CDB /* ThemesPagerCell.swift */; };
+		67838EE725710C9C00841CDB /* TrendingPagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67838EE625710C9C00841CDB /* TrendingPagerCell.swift */; };
 		6788863B2558F845004C7A45 /* PagerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788863A2558F845004C7A45 /* PagerTabViewController.swift */; };
-		678886662558F917004C7A45 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6788865A2558F917004C7A45 /* ButtonCell.xib */; };
-		678886672558F917004C7A45 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788865B2558F917004C7A45 /* SwipeDirection.swift */; };
-		678886682558F917004C7A45 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788865C2558F917004C7A45 /* IndicatorInfo.swift */; };
-		678886692558F917004C7A45 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788865D2558F917004C7A45 /* ButtonBarView.swift */; };
-		6788866A2558F917004C7A45 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788865E2558F917004C7A45 /* BarView.swift */; };
-		6788866B2558F917004C7A45 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788865F2558F917004C7A45 /* PagerTabStripBehaviour.swift */; };
-		6788866C2558F917004C7A45 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886602558F917004C7A45 /* ButtonBarViewCell.swift */; };
-		6788866D2558F917004C7A45 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886612558F917004C7A45 /* PagerTabStripError.swift */; };
-		6788866E2558F917004C7A45 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886622558F917004C7A45 /* BarPagerTabStripViewController.swift */; };
-		6788866F2558F917004C7A45 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886632558F917004C7A45 /* PagerTabStripViewController.swift */; };
-		678886702558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886642558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift */; };
-		678886712558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886652558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift */; };
 		678886772558FC35004C7A45 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678886762558FC35004C7A45 /* Enums.swift */; };
 		6788867B2558FDB0004C7A45 /* UIFont+Alinea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788867A2558FDB0004C7A45 /* UIFont+Alinea.swift */; };
 		6788867F255900C0004C7A45 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788867E255900C0004C7A45 /* CategoryViewController.swift */; };
@@ -57,19 +49,11 @@
 /* Begin PBXFileReference section */
 		15DBD97F6EA8874595798130 /* Pods-AlineaTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlineaTask.debug.xcconfig"; path = "Target Support Files/Pods-AlineaTask/Pods-AlineaTask.debug.xcconfig"; sourceTree = "<group>"; };
 		67166A0D25595FD800AC7D29 /* TrendingSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingSectionView.swift; sourceTree = "<group>"; };
+		67838ED82570D8EB00841CDB /* ButtonsSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsSegmentView.swift; sourceTree = "<group>"; };
+		67838EDC2570F5CB00841CDB /* CategoryPagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPagerCell.swift; sourceTree = "<group>"; };
+		67838EE325710C8C00841CDB /* ThemesPagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesPagerCell.swift; sourceTree = "<group>"; };
+		67838EE625710C9C00841CDB /* TrendingPagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingPagerCell.swift; sourceTree = "<group>"; };
 		6788863A2558F845004C7A45 /* PagerTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerTabViewController.swift; sourceTree = "<group>"; };
-		6788865A2558F917004C7A45 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
-		6788865B2558F917004C7A45 /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
-		6788865C2558F917004C7A45 /* IndicatorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorInfo.swift; sourceTree = "<group>"; };
-		6788865D2558F917004C7A45 /* ButtonBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
-		6788865E2558F917004C7A45 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
-		6788865F2558F917004C7A45 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
-		678886602558F917004C7A45 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		678886612558F917004C7A45 /* PagerTabStripError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripError.swift; sourceTree = "<group>"; };
-		678886622558F917004C7A45 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		678886632558F917004C7A45 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripViewController.swift; sourceTree = "<group>"; };
-		678886642558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		678886652558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		678886762558FC35004C7A45 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		6788867A2558FDB0004C7A45 /* UIFont+Alinea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Alinea.swift"; sourceTree = "<group>"; };
 		6788867E255900C0004C7A45 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -130,28 +114,8 @@
 		6788863D2558F8A6004C7A45 /* Repos */ = {
 			isa = PBXGroup;
 			children = (
-				678886592558F917004C7A45 /* PagerTabStrip */,
 			);
 			path = Repos;
-			sourceTree = "<group>";
-		};
-		678886592558F917004C7A45 /* PagerTabStrip */ = {
-			isa = PBXGroup;
-			children = (
-				6788865A2558F917004C7A45 /* ButtonCell.xib */,
-				6788865B2558F917004C7A45 /* SwipeDirection.swift */,
-				6788865C2558F917004C7A45 /* IndicatorInfo.swift */,
-				6788865D2558F917004C7A45 /* ButtonBarView.swift */,
-				6788865E2558F917004C7A45 /* BarView.swift */,
-				6788865F2558F917004C7A45 /* PagerTabStripBehaviour.swift */,
-				678886602558F917004C7A45 /* ButtonBarViewCell.swift */,
-				678886612558F917004C7A45 /* PagerTabStripError.swift */,
-				678886622558F917004C7A45 /* BarPagerTabStripViewController.swift */,
-				678886632558F917004C7A45 /* PagerTabStripViewController.swift */,
-				678886642558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift */,
-				678886652558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift */,
-			);
-			path = PagerTabStrip;
 			sourceTree = "<group>";
 		};
 		678886792558FD9C004C7A45 /* Extensions */ = {
@@ -268,6 +232,9 @@
 				678886B925593BD5004C7A45 /* ThemeCollectionViewCell.swift */,
 				6788871525594BA3004C7A45 /* TrendingTableViewCell.swift */,
 				67166A0D25595FD800AC7D29 /* TrendingSectionView.swift */,
+				67838EDC2570F5CB00841CDB /* CategoryPagerCell.swift */,
+				67838EE325710C8C00841CDB /* ThemesPagerCell.swift */,
+				67838EE625710C9C00841CDB /* TrendingPagerCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +264,7 @@
 			children = (
 				678886A52559183D004C7A45 /* Dynamic.swift */,
 				678886792558FD9C004C7A45 /* Extensions */,
+				67838ED82570D8EB00841CDB /* ButtonsSegmentView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -378,7 +346,6 @@
 				6788868D25591191004C7A45 /* themes.json in Resources */,
 				6788868E25591191004C7A45 /* categories.json in Resources */,
 				6788868C25591191004C7A45 /* trending.json in Resources */,
-				678886662558F917004C7A45 /* ButtonCell.xib in Resources */,
 				67BCBA0A255842AF00A001C0 /* LaunchScreen.storyboard in Resources */,
 				67BCBA07255842AF00A001C0 /* Assets.xcassets in Resources */,
 			);
@@ -416,42 +383,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6788866A2558F917004C7A45 /* BarView.swift in Sources */,
-				678886692558F917004C7A45 /* ButtonBarView.swift in Sources */,
 				6788867F255900C0004C7A45 /* CategoryViewController.swift in Sources */,
 				678886C225593F19004C7A45 /* ThemeService.swift in Sources */,
 				6788871A2559507A004C7A45 /* TrendingService.swift in Sources */,
 				678886B6255931A6004C7A45 /* CategoryService.swift in Sources */,
-				678886672558F917004C7A45 /* SwipeDirection.swift in Sources */,
+				67838ED92570D8EB00841CDB /* ButtonsSegmentView.swift in Sources */,
 				67888682255908CE004C7A45 /* ThemesViewController.swift in Sources */,
 				6788863B2558F845004C7A45 /* PagerTabViewController.swift in Sources */,
 				6788869D255914A2004C7A45 /* Theme.swift in Sources */,
+				67838EE725710C9C00841CDB /* TrendingPagerCell.swift in Sources */,
 				67DCA4E02567910F00E34544 /* TabBarViewController.swift in Sources */,
 				678886BA25593BD5004C7A45 /* ThemeCollectionViewCell.swift in Sources */,
-				678886702558F917004C7A45 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
+				67838EDE2570F5CB00841CDB /* CategoryPagerCell.swift in Sources */,
 				67888685255908DA004C7A45 /* TrendingViewController.swift in Sources */,
-				6788866D2558F917004C7A45 /* PagerTabStripError.swift in Sources */,
 				678886772558FC35004C7A45 /* Enums.swift in Sources */,
 				678886B12559306F004C7A45 /* CategoryDataSource.swift in Sources */,
 				6788870D2559494F004C7A45 /* TrendingViewModel.swift in Sources */,
 				6788869A25591401004C7A45 /* Category.swift in Sources */,
 				6788867B2558FDB0004C7A45 /* UIFont+Alinea.swift in Sources */,
 				678886A02559173C004C7A45 /* CategoryViewModel.swift in Sources */,
-				6788866B2558F917004C7A45 /* PagerTabStripBehaviour.swift in Sources */,
 				678886A62559183D004C7A45 /* Dynamic.swift in Sources */,
 				67BCB9FE255842AC00A001C0 /* AppDelegate.swift in Sources */,
 				67DCA4E32567973100E34544 /* EmptyViewController.swift in Sources */,
+				67838EE425710C8C00841CDB /* ThemesPagerCell.swift in Sources */,
 				678886AD25592C10004C7A45 /* UIView+Alinea.swift in Sources */,
-				6788866C2558F917004C7A45 /* ButtonBarViewCell.swift in Sources */,
 				67888713255949A1004C7A45 /* Trending.swift in Sources */,
-				678886682558F917004C7A45 /* IndicatorInfo.swift in Sources */,
 				678887102559495E004C7A45 /* TrendingDataSource.swift in Sources */,
-				6788866F2558F917004C7A45 /* PagerTabStripViewController.swift in Sources */,
 				6788871625594BA3004C7A45 /* TrendingTableViewCell.swift in Sources */,
-				678886712558F917004C7A45 /* ButtonBarPagerTabStripViewController.swift in Sources */,
 				67166A0E25595FD800AC7D29 /* TrendingSectionView.swift in Sources */,
 				678886C525593FE8004C7A45 /* ThemeDataSource.swift in Sources */,
-				6788866E2558F917004C7A45 /* BarPagerTabStripViewController.swift in Sources */,
 				678886BE25593ED2004C7A45 /* ThemeViewModel.swift in Sources */,
 				678886A925592992004C7A45 /* CategoryTableViewCell.swift in Sources */,
 			);

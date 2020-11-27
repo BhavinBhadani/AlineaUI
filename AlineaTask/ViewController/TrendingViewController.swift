@@ -1,9 +1,10 @@
 
 import UIKit
 
-class TrendingViewController: UIViewController, IndicatorInfoProvider {
+class TrendingViewController: UIViewController {
     var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 0.01))
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(TrendingTableViewCell.self, forCellReuseIdentifier: TrendingTableViewCell.identifier)
         tableView.register(TrendingSectionView.self, forHeaderFooterViewReuseIdentifier:TrendingSectionView.identifier)
@@ -12,8 +13,6 @@ class TrendingViewController: UIViewController, IndicatorInfoProvider {
         tableView.backgroundColor = .white
         return tableView
     }()
-
-    var itemInfo = IndicatorInfo(title: "")
 
     let dataSource = TrendingDataSource()
     
@@ -64,13 +63,6 @@ extension TrendingViewController {
     }
 }
 
-// MARK: IndicatorInfoProvider
-extension TrendingViewController {
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
-    }
-}
-
 // MARK: Tableview delegates
 extension TrendingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -78,7 +70,6 @@ extension TrendingViewController: UITableViewDelegate {
             return nil
         }
 
-        view.backgroundColor = .white
         view.setSectionTitle(with: section == 0 ? "Top Gainers" : "Top Sellers")
         
         return view

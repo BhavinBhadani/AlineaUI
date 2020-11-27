@@ -17,6 +17,7 @@ class TabBarViewController: UITabBarController {
 
     lazy public var searchViewController: UINavigationController = {
         let searchVC = EmptyViewController()
+        searchVC.view.backgroundColor = ATColor.alineaRed
         let searchNVC = getNavigationController(root: searchVC)
         searchNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_search")!, selectedImage: nil)
         return searchNVC
@@ -24,6 +25,7 @@ class TabBarViewController: UITabBarController {
 
     lazy public var marketViewController: UINavigationController = {
         let marketVC = EmptyViewController()
+        marketVC.view.backgroundColor = ATColor.alineaBottleGreen
         let marketNVC = getNavigationController(root: marketVC)
         marketNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_stock_account")!, selectedImage: nil)
         return marketNVC
@@ -31,6 +33,7 @@ class TabBarViewController: UITabBarController {
 
     lazy public var profileViewController: UINavigationController = {
         let profileVC = EmptyViewController()
+        profileVC.view.backgroundColor = ATColor.alineaBlue
         let profileNVC = getNavigationController(root: profileVC)
         profileNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_user_account")!, selectedImage: nil)
         return profileNVC
@@ -38,6 +41,7 @@ class TabBarViewController: UITabBarController {
 
     lazy public var ideasViewController: UINavigationController = {
         let ideasVC = EmptyViewController()
+        ideasVC.view.backgroundColor = ATColor.alineaYellow
         let ideasNVC = getNavigationController(root: ideasVC)
         ideasNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_bulb")!, selectedImage: nil)
         return ideasNVC

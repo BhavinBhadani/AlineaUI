@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ThemesViewController: UIViewController, IndicatorInfoProvider {
+class ThemesViewController: UIViewController {
     var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -14,9 +14,7 @@ class ThemesViewController: UIViewController, IndicatorInfoProvider {
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 25, bottom: 20, right: 25)
         return collectionView
     }()
-    
-    var itemInfo = IndicatorInfo(title: "")
-    
+        
     let dataSource = ThemeDataSource()
     
     lazy var viewModel : ThemeViewModel = {
@@ -62,13 +60,6 @@ extension ThemesViewController {
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
         collectionView.delegate = self
-    }
-}
-
-// MARK: IndicatorInfoProvider
-extension ThemesViewController {
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
     }
 }
 

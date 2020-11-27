@@ -1,7 +1,7 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController, IndicatorInfoProvider {
+class CategoryViewController: UIViewController {
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -13,7 +13,6 @@ class CategoryViewController: UIViewController, IndicatorInfoProvider {
         return tableView
     }()
 
-    var itemInfo = IndicatorInfo(title: "")
     let dataSource = CategoryDataSource()
     
     lazy var viewModel : CategoryViewModel = {
@@ -58,12 +57,5 @@ extension CategoryViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-    }
-}
-
-// MARK: IndicatorInfoProvider
-extension CategoryViewController {
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
     }
 }
