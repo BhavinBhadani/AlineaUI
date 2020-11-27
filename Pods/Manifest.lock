@@ -1,20 +1,3 @@
-PODS:
-  - AZTabBar (1.4.2):
-    - EasyNotificationBadge
-  - EasyNotificationBadge (1.2.0)
-
-DEPENDENCIES:
-  - AZTabBar
-
-SPEC REPOS:
-  trunk:
-    - AZTabBar
-    - EasyNotificationBadge
-
-SPEC CHECKSUMS:
-  AZTabBar: e4d5a1f5f3fc7be044d532b7a704d303cff9af11
-  EasyNotificationBadge: afeb15ed6f9a4262d626a2b745297e96afa26c2e
-
-PODFILE CHECKSUM: b65a149b98b44995d370b46d48d5173514839c28
+PODFILE CHECKSUM: a4e993f07af866113a5ff473a01d65fbbf16556a
 
 COCOAPODS: 1.10.0

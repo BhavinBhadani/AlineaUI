@@ -39,7 +39,8 @@ class TrendingTableViewCell: UITableViewCell {
         let container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
         container.backgroundColor = .white
-        container.radius = 12
+        container.layer.cornerRadius = 12
+        container.layer.masksToBounds = true
         return container
     }()
 

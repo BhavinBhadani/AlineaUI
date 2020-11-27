@@ -1,44 +1,7 @@
 
 import UIKit
 
-extension UIView {
-    @IBInspectable var radius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-            layer.masksToBounds = newValue > 0
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
-    
-    @IBInspectable var borderWidthExt : CGFloat {
-        set {
-            layer.borderWidth = newValue
-        }
-        get {
-            return layer.borderWidth
-        }
-    }
-    
-    @IBInspectable var borderColorExt : UIColor? {
-        set {
-            guard newValue != nil else {
-                layer.borderColor = nil
-                return
-            }
-            layer.borderColor = newValue?.cgColor
-        }
-        get {
-            guard let color = layer.borderColor else {
-                return nil
-            }
-            return UIColor(cgColor: color)
-        }
-    }
-}
-
-@IBDesignable class ShadowView: UIView {
+class ShadowView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -68,31 +31,31 @@ extension UIView {
         update()
     }
     
-    @IBInspectable public var cornerRadius: CGFloat = 0 {
+    public var cornerRadius: CGFloat = 0 {
         didSet {
             update()
         }
     }
     
-    @IBInspectable public var shadowRadius: CGFloat = 0 {
+    public var shadowRadius: CGFloat = 0 {
         didSet {
             update()
         }
     }
     
-    @IBInspectable public var shadowOffset: CGSize = .zero {
+    public var shadowOffset: CGSize = .zero {
         didSet {
             update()
         }
     }
     
-    @IBInspectable public var shadowOpacity: Float = 0 {
+    public var shadowOpacity: Float = 0 {
         didSet {
             update()
         }
     }
     
-    @IBInspectable public var shadowColor: UIColor = .black {
+    public var shadowColor: UIColor = .black {
         didSet {
             update()
         }

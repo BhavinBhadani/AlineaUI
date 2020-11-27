@@ -6,10 +6,42 @@
 //
 
 import UIKit
-import AZTabBar
 
-class TabBarViewController: UIViewController {
-    var tabController: AZTabBarController!
+class TabBarViewController: UITabBarController {
+    lazy public var homeViewController: UINavigationController = {
+        let homeVC = PagerTabViewController()
+        let homeNVC = getNavigationController(root: homeVC)
+        homeNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_home")!, selectedImage: nil)
+        return homeNVC
+    }()
+
+    lazy public var searchViewController: UINavigationController = {
+        let searchVC = EmptyViewController()
+        let searchNVC = getNavigationController(root: searchVC)
+        searchNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_search")!, selectedImage: nil)
+        return searchNVC
+    }()
+
+    lazy public var marketViewController: UINavigationController = {
+        let marketVC = EmptyViewController()
+        let marketNVC = getNavigationController(root: marketVC)
+        marketNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_stock_account")!, selectedImage: nil)
+        return marketNVC
+    }()
+
+    lazy public var profileViewController: UINavigationController = {
+        let profileVC = EmptyViewController()
+        let profileNVC = getNavigationController(root: profileVC)
+        profileNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_user_account")!, selectedImage: nil)
+        return profileNVC
+    }()
+
+    lazy public var ideasViewController: UINavigationController = {
+        let ideasVC = EmptyViewController()
+        let ideasNVC = getNavigationController(root: ideasVC)
+        ideasNVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_bulb")!, selectedImage: nil)
+        return ideasNVC
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,58 +52,14 @@ class TabBarViewController: UIViewController {
 // MARK: - Helpers
 extension TabBarViewController {
     private func setupTabBar() {
-        var icons = [UIImage]()
-        icons.append(UIImage(named: "ic_home")!)
-        icons.append(UIImage(named: "ic_search")!)
-        icons.append(UIImage(named: "ic_stock_account")!)
-        icons.append(UIImage(named: "ic_user_account")!)
-        icons.append(UIImage(named: "ic_bulb")!)
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -2)
+        tabBar.layer.shadowRadius = 10
+        tabBar.layer.shadowOpacity = 0.2
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.masksToBounds = false
         
-        //init
-        tabController = .insert(into: self, withTabIcons: icons)
-        
-        //set delegate
-        tabController.delegate = self
-        
-        //set child controllers
-        let homeVC = PagerTabViewController()
-        tabController.setViewController(getNavigationController(root: homeVC), atIndex: 0)
-        
-        let searchVC = EmptyViewController()
-        searchVC.view.backgroundColor = ATColor.alineaBottleGreen
-        tabController.setViewController(getNavigationController(root: searchVC), atIndex: 1)
-        
-        let marketVC = EmptyViewController()
-        marketVC.view.backgroundColor = ATColor.alineaRed
-        tabController.setViewController(getNavigationController(root: marketVC), atIndex: 2)
-        
-        let connectionVC = EmptyViewController()
-        connectionVC.view.backgroundColor = ATColor.alineaYellow
-        tabController.setViewController(getNavigationController(root: connectionVC), atIndex: 3)
-        
-        let accountVC = EmptyViewController()
-        accountVC.view.backgroundColor = ATColor.alineaBlue
-        tabController.setViewController(getNavigationController(root: accountVC), atIndex: 4)
-        
-        //customize
-        tabController.highlightedBackgroundColor = ATColor.alineaBlue ?? .blue
-        tabController.defaultColor = .darkGray
-        tabController.selectedColor = .white
-        tabController.buttonsBackgroundColor = UIColor(red: (247.0/255), green: (247.0/255), blue: (247.0/255), alpha: 1.0)
-        tabController.selectionIndicatorHeight = 0
-        tabController.tabBarHeight = 50
-        tabController.animateTabChange = false
-        tabController.onlyShowTextForSelectedButtons = false
-        tabController.separatorLineVisible = false
-        
-        let container = tabController.buttonsContainer!
-
-        container.layer.shadowOffset = CGSize(width: 0, height: -2)
-        container.layer.shadowRadius = 10
-        container.layer.shadowOpacity = 0.2
-        container.layer.shadowColor = UIColor.black.cgColor
-
-        tabController.highlightButton(atIndex: 0)
+        viewControllers = [homeViewController, searchViewController, marketViewController, profileViewController, ideasViewController]
+        tabBar.tintColor = ATColor.alineaBlue
     }
     
     private func getNavigationController(root: UIViewController) -> UINavigationController{
@@ -83,27 +71,5 @@ extension TabBarViewController {
             navigationController.overrideUserInterfaceStyle = .light
         }
         return navigationController
-    }
-}
-
-// MARK: - AZTabBar Delegate
-extension TabBarViewController: AZTabBarDelegate {
-    func tabBar(_ tabBar: AZTabBarController, statusBarStyleForIndex index: Int) -> UIStatusBarStyle {
-        return .default
-    }
-    
-    func tabBar(_ tabBar: AZTabBarController, shouldAnimateButtonInteractionAtIndex index: Int) -> Bool {
-        return false
-    }
-    
-    func tabBar(_ tabBar: AZTabBarController, didSelectTabAtIndex index: Int) {
-        for (i, _) in tabController.buttons.enumerated() {
-            if i == index {
-                tabController.highlightButton(atIndex: i)
-            } else {
-                tabController.removeHighlight(atIndex: i)
-            }
-        }
-        
     }
 }

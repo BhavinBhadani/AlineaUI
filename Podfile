@@ -6,5 +6,4 @@ target 'AlineaTask' do
   use_frameworks!
 
   # Pods for AlineaTask
-pod 'AZTabBar'
 end

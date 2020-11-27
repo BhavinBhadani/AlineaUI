@@ -10,9 +10,10 @@ class ThemeCollectionViewCell: UICollectionViewCell {
         let container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
         container.backgroundColor = ATColor.alineaGrey1
-        container.radius = 10
-        container.borderWidthExt = 1
-        container.borderColorExt = ATColor.alineaGrey2
+        container.layer.cornerRadius = 10
+        container.layer.masksToBounds = true
+        container.layer.borderWidth = 1
+        container.layer.borderColor = ATColor.alineaGrey2?.cgColor
         return container
     }()
     

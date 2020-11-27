@@ -19,7 +19,8 @@ class CategoryTableViewCell: UITableViewCell {
     private var containerContentView: UIView = {
         let container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
-        container.radius = 50
+        container.layer.cornerRadius = 50
+        container.layer.masksToBounds = true
         return container
     }()
     

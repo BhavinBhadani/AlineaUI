@@ -18,7 +18,6 @@ class PagerTabViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         setupPagerView()
         super.viewDidLoad()
-        self.title = "Explore"
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

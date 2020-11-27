@@ -328,7 +328,6 @@
 				67BCB9F6255842AC00A001C0 /* Sources */,
 				67BCB9F7255842AC00A001C0 /* Frameworks */,
 				67BCB9F8255842AC00A001C0 /* Resources */,
-				05FAAB4472E986D2C73172C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,23 +387,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05FAAB4472E986D2C73172C3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlineaTask/Pods-AlineaTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlineaTask/Pods-AlineaTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlineaTask/Pods-AlineaTask-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E74F65B89B992CB2A398C27E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
