@@ -51,6 +51,7 @@ extension PagerTabViewController {
         navigationItem.titleView = titleLabel
 
         view.addSubview(buttonSegment)
+        buttonSegment.delegate = self
         buttonSegment.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         buttonSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         buttonSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
@@ -64,6 +65,13 @@ extension PagerTabViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+}
+
+extension PagerTabViewController: ButtonSegmentViewDelegate {
+    func change(to index: Int) {
+        collectionView.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        collectionView.setNeedsLayout()
     }
 }
 
@@ -103,18 +111,6 @@ extension PagerTabViewController: UICollectionViewDelegate, UICollectionViewData
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: view.frame.width, height: collectionView.bounds.height)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let x = scrollView.contentOffset.x
-        let offset = x / CGFloat(pages.count)
-        buttonSegment.selectorView.transform = CGAffineTransform(translationX: offset, y: 0)
-    }
-    
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        let item = Int(scrollView.contentOffset.x / view.frame.width)
-        let indexPath = IndexPath(item: item, section: 0)
-        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {

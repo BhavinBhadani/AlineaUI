@@ -37,10 +37,10 @@ class ButtonSegmentView: UIView {
             btn.setTitleColor(btn == button ? selectorTextColor : textColor, for: .normal)
         }
         
-//        let selectorPosition = frame.width/CGFloat(buttonTitles.count) * CGFloat(index)
-//        UIView.animate(withDuration: 0.2) {
-//            self.selectorView.frame.origin.x = selectorPosition
-//        }
+        let selectorPosition = frame.width/CGFloat(buttonTitles.count) * CGFloat(index)
+        UIView.animate(withDuration: 0.2) {
+            self.selectorView.frame.origin.x = selectorPosition
+        }
     }
     
     func setButtonTitles(buttonTitles: [String]) {
