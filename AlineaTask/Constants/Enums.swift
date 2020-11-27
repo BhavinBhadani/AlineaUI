@@ -25,6 +25,8 @@ enum APIError: String, Error {
     case noNetwork = "No Network"
     case serverOverload = "Server is overloaded"
     case permissionDenied = "You don't have permission"
+    case invalidFilePath = "Invalid file path"
+    case unableToParseData = "Unable to parse data"
 }
 
 enum TrendingTableSection: Int {

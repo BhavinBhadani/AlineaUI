@@ -11,11 +11,12 @@ struct CategoryViewModel {
     }
     
     func fetchCategories() {
-        CategoryService().fetchCategories { (success, categories, error) in
-            if success {
+        CategoryService().fetchCategories { result in
+            switch result {
+            case .success(let categories):
                 self.dataSource?.data.value = categories
-            } else {
-                self.onErrorHandling?(error)
+            case .failure(let e):
+                self.onErrorHandling?(e)
             }
         }
     }

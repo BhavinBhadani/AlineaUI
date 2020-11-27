@@ -11,11 +11,12 @@ struct ThemeViewModel {
     }
     
     func fetchThemes() {
-        ThemeService().fetchThemes { (success, categories, error) in
-            if success {
-                self.dataSource?.data.value = categories
-            } else {
-                self.onErrorHandling?(error)
+        ThemeService().fetchThemes { result in
+            switch result {
+            case .success(let themes):
+                self.dataSource?.data.value = themes
+            case .failure(let e):
+                self.onErrorHandling?(e)
             }
         }
     }

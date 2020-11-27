@@ -11,11 +11,12 @@ struct TrendingViewModel {
     }
 
     func fetchTrendings() {
-        TrendingService().fetchTrending { (success, stocks, error) in
-            if success {
+        TrendingService().fetchTrending { result in
+            switch result {
+            case .success(let stocks):
                 self.dataSource?.data.value = stocks
-            } else {
-                self.onErrorHandling?(error)
+            case .failure(let e):
+                self.onErrorHandling?(e)
             }
         }
     }
