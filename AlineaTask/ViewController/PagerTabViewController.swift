@@ -53,16 +53,16 @@ extension PagerTabViewController {
 
         view.addSubview(buttonSegment)
         buttonSegment.delegate = self
-        buttonSegment.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        buttonSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        buttonSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        buttonSegment.heightAnchor.constraint(equalToConstant: 50) .isActive = true
+        buttonSegment.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        buttonSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        buttonSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        buttonSegment.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         view.addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: buttonSegment.bottomAnchor, constant: 0).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        collectionView.topAnchor.constraint(equalTo: buttonSegment.bottomAnchor).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         collectionView.dataSource = self
         collectionView.delegate = self
