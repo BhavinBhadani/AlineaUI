@@ -5,7 +5,7 @@ class PagerTabViewController: UIViewController {
     enum SegmentTab {
         case category, themes, trending, chat
     }
-    fileprivate let pages: [SegmentTab] = [.category, .themes, .trending, .chat]
+    fileprivate let pages: [SegmentTab] = [.chat, .category, .themes, .trending]
     
     private let buttonSegment: ButtonSegmentView = {
         let segmentView = ButtonSegmentView(frame: .zero, buttonTitles: ["Category", "Themes", "Trending", "Chat"])
@@ -53,16 +53,16 @@ extension PagerTabViewController {
 
         view.addSubview(buttonSegment)
         buttonSegment.delegate = self
-        buttonSegment.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        buttonSegment.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         buttonSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         buttonSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         buttonSegment.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         view.addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: buttonSegment.bottomAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: buttonSegment.topAnchor).isActive = true
         
         collectionView.dataSource = self
         collectionView.delegate = self

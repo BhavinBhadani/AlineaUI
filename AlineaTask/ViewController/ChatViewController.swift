@@ -59,6 +59,8 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     // MARK: - Public properties
     lazy var messageList: [MockMessage] = []
 
+    private let keyboardManager = KeyboardManager()
+
     // MARK: - Private properties
     private let formatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -72,15 +74,16 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         configureMessageCollectionView()
         configureMessageInputBar()
         
-        let uniqueID = UUID().uuidString
-        let user = MockUser(senderId: "-1", displayName: "Test User")
-        let date = Date()
-        let randomSentence = "Just for test"
-        let message = MockMessage(text: randomSentence, user: user, messageId: uniqueID, date: date)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-            self?.insertMessage(message)
+        for i in 0...10 {
+            let uniqueID = UUID().uuidString
+            let user = MockUser(senderId: "\(i)", displayName: "Test User")
+            let date = Date()
+            let randomSentence = "Just for test \(i)"
+            let message = MockMessage(text: randomSentence, user: user, messageId: uniqueID, date: date)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+                self?.insertMessage(message)
+            }
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -93,8 +96,6 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         
         scrollsToLastItemOnKeyboardBeginsEditing = true // default false
         maintainPositionOnKeyboardFrameChanged = true // default false
-
-        showMessageTimestampOnSwipeLeft = true // default false
 
         let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout
         layout?.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -209,6 +210,14 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         // Finally set the items
         messageInputBar.setStackViewItems(items, forStack: .bottom, animated: false)
         messageInputBar.shouldAnimateTextDidChangeLayout = true
+        
+        view.addSubview(messageInputBar)
+        
+        // Binding the inputBar will set the needed callback actions to position the inputBar on top of the keyboard
+        keyboardManager.bind(inputAccessoryView: messageInputBar)
+        
+        // Binding to the tableView will enabled interactive dismissal
+        keyboardManager.bind(to: messagesCollectionView)
     }
     
     private func makeButton(named: String) -> InputBarButtonItem {
@@ -247,9 +256,6 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     }
 
     func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        if indexPath.section % 3 == 0 {
-            return NSAttributedString(string: MessageKitDateFormatter.shared.string(from: message.sentDate), attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.darkGray])
-        }
         return nil
     }
 
@@ -319,7 +325,7 @@ extension ChatViewController: MessageCellDelegate {
     }
 
     func didTapBackground(in cell: MessageCollectionViewCell) {
-        messageInputBar.inputTextView.resignFirstResponder()
+        messageInputBar.resignFirstResponder()
     }
 }
 
