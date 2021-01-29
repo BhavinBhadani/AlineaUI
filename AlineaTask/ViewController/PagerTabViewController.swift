@@ -3,12 +3,12 @@ import UIKit
 
 class PagerTabViewController: UIViewController {
     enum SegmentTab {
-        case category, themes, trending
+        case category, themes, trending, chat
     }
-    fileprivate let pages: [SegmentTab] = [.category, .themes, .trending]
+    fileprivate let pages: [SegmentTab] = [.category, .themes, .trending, .chat]
     
     private let buttonSegment: ButtonSegmentView = {
-        let segmentView = ButtonSegmentView(frame: .zero, buttonTitles: ["Category", "Themes", "Trending"])
+        let segmentView = ButtonSegmentView(frame: .zero, buttonTitles: ["Category", "Themes", "Trending", "Chat"])
         segmentView.selectorViewColor = ATColor.alineaBlue ?? .blue
         segmentView.selectorTextColor = ATColor.alineaBlue ?? .blue
         segmentView.textColor = ATColor.alineaGrey ?? .gray
@@ -31,6 +31,7 @@ class PagerTabViewController: UIViewController {
         collectionView.register(CategoryPagerCell.self, forCellWithReuseIdentifier: CategoryPagerCell.identifier)
         collectionView.register(ThemesPagerCell.self, forCellWithReuseIdentifier: ThemesPagerCell.identifier)
         collectionView.register(TrendingPagerCell.self, forCellWithReuseIdentifier: TrendingPagerCell.identifier)
+        collectionView.register(ChatPagerCell.self, forCellWithReuseIdentifier: ChatPagerCell.identifier)
         return collectionView
     }()
     
@@ -102,6 +103,13 @@ extension PagerTabViewController: UICollectionViewDelegate, UICollectionViewData
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrendingPagerCell.identifier,
                                                                 for: indexPath) as? TrendingPagerCell else {
                 fatalError("UICollectionView must be downcasted to TrendingPagerCell")
+            }
+            return cell
+            
+        case .chat:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatPagerCell.identifier,
+                                                                for: indexPath) as? ChatPagerCell else {
+                fatalError("UICollectionView must be downcasted to ChatPagerCell")
             }
             return cell
         }
